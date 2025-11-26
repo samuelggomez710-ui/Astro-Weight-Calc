@@ -12,6 +12,7 @@ var planets = [
     ['Mercury', 0.377], 
     ['Sun', 27.9] 
 ];
+planets.reverse(); // Reverse the array to have the sun at the top
 
 // Three big probems:
 // Populate the HTML dropdown options
@@ -41,7 +42,9 @@ function handleClickEvent() { // Creates the function that runs when the button 
     const weightInput = document.getElementById("user-weight").value; // Gets the weight input value from HTML
     const selectedPlanet = document.getElementById("planets").value; // Gets the selected planet from the dropdown
     const calculatedWeight = calculateWeight(weightInput, selectedPlanet); // Calls the calculateWeight function
-    if (calculatedWeight !== null) {
+    if (calculatedWeight <= 0) {
+        document.getElementById("output").textContent = "Please enter a valid weight greater than zero."; // Error message for invalid weight
+    } else if (calculatedWeight !== null) {
         document.getElementById("output").textContent = `If you were on ${selectedPlanet}, you would weigh ${calculatedWeight.toFixed(2)}lbs!`; // Displays the result
     } else {
         document.getElementById("output").textContent = "Please enter a valid weight and select a planet."; // Error message

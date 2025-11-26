@@ -1,4 +1,64 @@
-selector {
-    font-family: "Times New Roman", Times, serif;
+body {
+  background-image: url("https://images-assets.nasa.gov/image/PIA21073/PIA21073~medium.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  margin-left: 25%;
+  margin-top: 25px; /* added px */
+}
+
+h5 {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  margin-top: 25%;
+  font-size: 40px;
+  color: white;
+}
+
+.controls {
+  margin-top: 100px;
+  display: flex;       /* puts children side by side */
+  gap: 100px;           /* adds spacing between them */
+  align-items: center;     /* vertical alignment */
+  justify-content: center; /* horizontal centering */;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  margin-top: 20px;
+}
+
+button {
+  font-size: 18px;
+  padding: 6px 20px;
+  margin-top: 50px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 166, 0, 0.74);
+  color: white;
+}
+
+
+#user-weight, #planets {
+  flex: 0 0 auto;             /* optional: make them expand evenly */
+  width: 200px;        /* pick a size that looks good */
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
+#output {
+    color: white;
+    font-size: 24px;
+    margin-top: 50px;
     text-align: center;
+    background-color: orange;
+    width: 500px;
+    height; 100px;
+    margin-left: auto;
+    margin-right: auto;
 }

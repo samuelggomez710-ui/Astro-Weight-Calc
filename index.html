@@ -4,22 +4,34 @@
 <head>
   <meta charset="utf-8">
   <title>Astro Weight Calculator</title>
+  <!-- Make the HTML link the CSS file-->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<!-- Make a button that will calculate the weight on a selected planet -->
-<button id="calculate-button">Calculate</button>
+  <main>
+    <h5>Astro Weight Calculator</h5>
 
-<!-- Make an input field for the user to enter their weight -->
-<input id="user-weight" type="number" placeholder="Enter your weight in pounds"></input>
+   <div class="controls">
+  <!-- Make an input field for the user to enter their weight -->
+  <input id="user-weight" type="number" placeholder="Enter your weight (lbs)">
 
-<!-- Make a select element with planet for ID-->
-<select id="planets"></select>
+  <!-- Make a select element with planet for ID-->
+  <select id="planets"></select>
+   </div>
 
-<!-- Make a div to display the result -->
- <p id ="output"></p>
+  <!-- Make a button that will calculate the weight on a selected planet -->
+  <div class="button-container">
+    <button id="calculate-button">Calculate</button>
+  </div>
 
-  <script src="main.js" charset="utf-8"></script>
+  <!-- Make a div to display the result -->
+  <p id ="output"></p>
+    <script src="main.js" charset="utf-8"></script>
+
+  <!-- The next lines will be to stylize the website-->
+  
+ </main>
 </body>
 
 </html>
